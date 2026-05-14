@@ -1,0 +1,27 @@
+Please act as a professional verilog designer.
+
+Implement a module of a 64-bit ripple carry adder, which includes several registers to enable the pipeline stages. The output result is available on the result port, and the o_en = 1 indicates the availability of the result.
+
+Module name:  
+    adder_pipe_64bit               
+Parameters:
+    DATA_WIDTH: total operand width, default 64.
+    STG_WIDTH: per-stage chunk width, default 16. The number of pipeline stages is DATA_WIDTH/STG_WIDTH = 4.
+Input ports:
+    clk: Clock input
+    rst_n: Active low reset signal
+    i_en: Enable signal for addition operation
+    adda: 64-bit input operand A
+    addb: 64-bit input operand B
+   
+Output ports:
+    result: 65-bit output representing the sum of adda and addb.
+    o_en: Output enable signal.   
+
+Implementation:
+The module includes several registers to enable the pipeline stages and synchronize the input enable signal (i_en). These registers are controlled by the clock (clk) and reset (rst_n) signals.
+The operands adda and addb are split into 4 contiguous STG_WIDTH-bit chunks; each pipeline stage adds the corresponding chunks together with the carry from the previous stage, so the result and o_en become valid 4 clock cycles after i_en is asserted.
+The sum values for each pipeline stage are calculated by adding the corresponding input operands and carry signals.
+The output enable signal (o_en) is updated based on the pipeline stages and synchronized with the clock (clk) and reset (rst_n) signals.
+
+Give me the complete code.

@@ -1,0 +1,22 @@
+# Conda environment for the RTL-BenchMT evaluation framework.
+# Bundles Python deps with the iverilog system tool so you don't need apt /
+# brew. Create with:
+#     conda env create -f environment.yml
+#     conda activate rtl-benchmt-eval
+
+name: rtl-benchmt-eval
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python>=3.10
+  # System tools
+  - iverilog>=11.0      # required for all benchmarks
+  - make                # required for cocotb (CVDP only)
+  # cocotb (optional — only needed for cvdp_cid002 / cvdp_cid003)
+  - cocotb>=1.8.0
+  # pip-only deps
+  - pip
+  - pip:
+      - openai>=1.0.0   # required for the Azure GPT example caller

@@ -1,0 +1,6 @@
+ This Verilog module is a simple logic gate that takes two inputs, x and y, and produces an output, z. The output is the logical negation of the exclusive-or (XOR) of the two inputs. In other words, the output is true when x and y are equal, that is, when both are false or both are true. If x and y differ, then the output is false. This module is a basic building block for more complex digital logic circuits.
+
+module top_module(
+	input x,
+	input y,
+	output z);

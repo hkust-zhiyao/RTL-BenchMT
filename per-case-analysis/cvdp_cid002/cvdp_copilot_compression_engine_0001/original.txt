@@ -1,0 +1,170 @@
+The **24-bit Compression Engine** reduces a 24-bit input vector into a compact representation using a 12-bit mantissa and a 4-bit exponent. The module compresses the vector such that the most significant bits are retained in the mantissa, and the exponent encodes the position of these significant bits. The module outputs the compressed mantissa and exponent in a single clock cycle. The RTL implementation requires completing the logic for one-hot encoding and mantissa extraction to finalize the design.
+
+### **Design Specification**:
+
+The compression engine encodes input vectors using the following logic:
+- **Mantissa (`mantissa_o`)**: Contains the **most significant 12 bits** of the input vector starting from the first set bit (from MSB). The mantissa **includes the first set bit** and continues with the next 11 bits. If there are fewer than 12 bits available after the first set bit, the mantissa is padded with zeros on the right.
+- **Exponent (`exponent_o`)**: Encodes the **zero-based index** of the first set bit (from MSB) in the input vector.
+- **Special Case for Input = 0**:
+  - If the input vector is all zeros (`num_i = 24'h0`), both the `mantissa_o` and `exponent_o` outputs are zero.
+- **Reconstruction Logic**:
+  - Due to the lossy nature of the compression, the reconstructed value may not exactly match the original input vector:
+  ```verilog
+  if (exponent == 0)
+    vector = mantissa;
+  else
+    vector = {mantissa, {exponent-1{1'b0}}};
+  ```
+
+---
+
+### **Module Requirements**:
+
+1. **One-Hot Encoding Logic**:
+   - The position of the most significant set bit (MSB) in the input vector (`num_i`) is encoded as a **one-hot vector** (`exp_oh`).
+   - Each bit in `exp_oh` corresponds to a bit in `num_i`. Only the bit corresponding to the MSB in `num_i` is set to `1`, and all others are set to `0`.
+   - Example:
+     - For `num_i = 24'h008000`, `exp_oh = 24'b000000000000000010000000`.
+     - For `num_i = 24'h000001`, `exp_oh = 24'b000000000000000000000001`.
+
+2. **`onehot_to_bin` Module**:
+   - The one-hot encoded vector (`exp_oh`) is converted into a binary representation (`exp_bin`) using the **`onehot_to_bin` module**. This binary representation corresponds to the zero-based position of the MSB in `num_i`.
+   - The final exponent is calculated as:
+     ```verilog
+     exponent = (|exp_oh) ? exp_bin + 4'h1 : 4'h0;
+     ```
+   - The `onehot_to_bin` module is reusable and ensures modularity.
+
+3. **Mantissa Extraction Logic**:
+   - The mantissa is extracted based on the calculated exponent:
+     - If the exponent is `0`, the mantissa equals the lower 12 bits of the input vector (`num_i[11:0]`).
+     - Otherwise, the mantissa includes the most significant 12 bits of `num_i` starting from the MSB (identified by the exponent).
+   - Example:
+     - For `num_i = 24'hFFC01D` (binary: `111111111100000000011101`), the mantissa is `12'b111111111100`.
+
+4. **Edge Case Handling**:
+   - If the input vector is all zeros (`num_i = 24'h000000`), the outputs are explicitly set to `mantissa_o = 12'h0` and `exponent_o = 4'h0`.
+
+---
+
+### **Timing and Latency**:
+- The module must produce outputs (`mantissa_o` and `exponent_o`) in a **single clock cycle**.
+- Ensure outputs are synchronized with the clock and reset behavior is correctly implemented.
+
+---
+
+### **Inputs and Outputs**:
+
+| **Inputs**               | **Description**                                          |
+|--------------------------|----------------------------------------------------------|
+| `clk`                    | Clock signal (active on the rising edge).                |
+| `reset`                  | Active HIGH synchronous reset. Resets the outputs to 0.  |
+| `num_i [23:0]`           | 24-bit input vector.                                     |
+
+| **Outputs**              | **Description**                                          |
+|--------------------------|----------------------------------------------------------|
+| `mantissa_o [11:0]`      | 12-bit mantissa.                                         |
+| `exponent_o [3:0]`       | 4-bit exponent.                                          |
+
+---
+
+### **Example Cases**
+
+| **Input Vector (`num_i`)** | **Mantissa (`mantissa_o`)** | **Exponent (`exponent_o`)** | **Reconstructed Vector**    |
+|----------------------------|-----------------------------|-----------------------------|-----------------------------|
+| `24'h00FC`                | `12'h00FC`                 | `4'h0`                     | `24'h00FC`                 |
+| `24'hFFC01D`              | `12'hFF8`                  | `4'hC`                     | `24'hFFC000`               |
+| `24'h000000`              | `12'h000`                  | `4'h0`                     | `24'h000000`               |
+| `24'h000001`              | `12'h001`                  | `4'h0`                     | `24'h000001`               |
+
+---
+
+### **Partial Code**
+
+```verilog
+module compression_engine (
+  input   logic        clk,
+  input   logic        reset,
+  input   logic [23:0] num_i,
+  output  logic [11:0] mantissa_o,
+  output  logic [3:0]  exponent_o
+);
+
+  // --------------------------------------------------------
+  // Internal wires and registers
+  // --------------------------------------------------------
+  logic [23:12] exp_oh;         // One-hot encoded exponent
+  logic [3:0]   exp_bin;        // Binary exponent
+  logic [3:0]   exponent;       // Adjusted exponent
+  logic [11:0]  mantissa;       // Mantissa
+  
+  // --------------------------------------------------------
+  // One-Hot Encoding of the Exponent
+  // --------------------------------------------------------
+  assign exp_oh[23] = num_i[23];
+  
+  // Insert code for one-hot encoding of `exp_oh`
+  
+  // Use the `onehot_to_bin` module to convert one-hot to binary exponent
+  onehot_to_bin #(
+    .ONE_HOT_W(12),
+    .BIN_W(4)
+  ) exp_oh_bin (
+    .oh_vec_i(exp_oh),
+    .bin_vec_o(exp_bin)
+  );
+  
+  assign exponent = (|exp_oh) ? exp_bin + 4'h1 : exp_bin;
+
+  // --------------------------------------------------------
+  // Mantissa Extraction Logic
+  // --------------------------------------------------------
+  // Insert code for extracting mantissa based on `exponent`
+
+  // --------------------------------------------------------
+  // Output assignments
+  // --------------------------------------------------------
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      exponent_o <= 4'd0;
+      mantissa_o <= 12'd0;
+    end else begin
+      exponent_o <= exponent;
+      mantissa_o <= mantissa;
+    end
+  end
+
+endmodule
+
+module onehot_to_bin #(
+  parameter ONE_HOT_W = 32,  // Width of the one-hot input
+  parameter BIN_W     = 5    // Width of the binary output
+)(
+  input   wire [ONE_HOT_W-1:0]  oh_vec_i,  // One-hot encoded input
+  output  logic [BIN_W-1:0]     bin_vec_o  // Binary encoded output
+);
+
+  integer i;
+
+ // Insert code for one-hot encoding of `exp_oh` for priority encoding
+
+endmodule
+```
+
+---
+
+### **Instructions:**
+
+#### Complete the One-Hot Encoding Logic:
+1. Implement the **one-hot vector generation** (`exp_oh`) to identify the most significant set bit of the input vector (`num_i`).
+   - For each bit `i`:
+     ```verilog
+     exp_oh[i] = num_i[i] & ~|num_i[23:i+1];
+     ```
+
+2. Use the provided `onehot_to_bin` module to convert the one-hot vector (`exp_oh`) into a binary exponent (`exp_bin`).
+
+#### Complete the Mantissa Extraction Logic:
+3. Extract the **12-bit mantissa** using the calculated `exponent`:
+   - If the input vector is all zeros, set the mantissa to `0`.
+   - Otherwise, extract the **most significant 12 bits** starting from the first set bit identified by the `exponent`.

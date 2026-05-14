@@ -1,0 +1,19 @@
+# Top-level helper scripts are kept locally only — they are not part of
+# the public release. The eval/ package IS public; see exception below.
+/*.py
+
+# Python bytecode caches
+__pycache__/
+*.pyc
+
+# Local Claude Code agent definitions are kept session-local.
+.claude/
+
+# Eval secrets: only the .example files are committed.
+eval/config/openai-api-list.txt
+eval/config/llm_config.yaml
+eval/config/api-list.txt
+
+# iverilog VCD waveform dumps — created by `vvp` when a testbench has
+# `$dumpfile("wave.vcd")`. Side-effect of running eval, not an artifact.
+*.vcd

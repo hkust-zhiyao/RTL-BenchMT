@@ -1,0 +1,14 @@
+# Python dependencies for the RTL-BenchMT evaluation framework.
+# Install with: pip install -r requirements.txt
+#
+# System tools (NOT installed by pip — see README.md):
+#   - iverilog (Icarus Verilog) >= 11.0   — required for all benchmarks
+#   - make                                — required for cocotb (CVDP only)
+
+# OpenAI SDK — only needed if you use the Azure GPT example caller.
+# If you plug in your own LLM backend, you can drop this dependency.
+openai>=1.0.0
+
+# cocotb — only needed if you evaluate the CVDP (cid002 / cid003) benchmarks.
+# VerilogEval and RTLLM run on iverilog alone, no Python testbench needed.
+cocotb>=1.8.0

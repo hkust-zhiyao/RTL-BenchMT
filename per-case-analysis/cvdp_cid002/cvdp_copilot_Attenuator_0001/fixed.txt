@@ -1,0 +1,113 @@
+Complete the given partial SystemVerilog code for a module `Attenuator` that configures a digital attenuator chip by serially shifting a 5-bit control word (`data`) to the chip. The module handles the following key operations:
+- Serially shifts the 5-bit control word out through the `ATTN_DATA` signal.
+- Toggles the `ATTN_CLK` signal for synchronization.
+- Pulses the `ATTN_LE` signal after all 5 bits are shifted, indicating data latching.
+
+---
+
+### Design Specification:
+The module communicates with an attenuator chip using a serial protocol. It receives a 5-bit control word (`data`) and sends it out bit-by-bit on the `ATTN_DATA` line. The design includes:
+- A clock divider (`clk_div2`) to generate a slower clock for communication.
+- An FSM to manage the states: `IDLE`, `LOAD`, `SHIFT`, and `LATCH`.
+- Proper reset behavior to initialize outputs and internal registers.
+
+---
+
+### Signals
+
+#### **Input Signals**
+| **Signal Name**            | **Description**                                        |
+|----------------------------|--------------------------------------------------------|
+| `clk`                      | System clock.                                          |
+| `reset`                    | Active-high asynchronous reset signal.                 |
+| `data`                     | 5-bit control word to be shifted out.                  |
+
+#### **Output Signals**
+| **Signal Name**            | **Description**                                        |
+|----------------------------|--------------------------------------------------------|
+| `ATTN_CLK`                 | Clock signal for the attenuator chip.                  |
+| `ATTN_DATA`                | Serial data output to the attenuator chip.             |
+| `ATTN_LE`                  | Latch enable signal for the attenuator chip.           |
+
+---
+
+### Edge Cases:
+1. **Idle State**: When the module is not shifting data (e.g., `data` does not change), the outputs (`ATTN_CLK`, `ATTN_DATA`, `ATTN_LE`) should remain inactive.
+2. **Data Change**: When a new control word is loaded into `data`, the FSM transitions through `LOAD`, `SHIFT`, and `LATCH` states to transmit the data.
+3. **Reset Condition**: All outputs (`ATTN_CLK`, `ATTN_DATA`, `ATTN_LE`) and internal registers must initialize to `0` on reset.
+
+---
+
+### Example Operations
+
+#### **Example 1: New Data Loaded**
+- **Input**: 
+  - `reset = 1'b0`
+  - `data = 5'b10101`
+- **Expected Output**: 
+  - `ATTN_DATA` outputs bits: `1, 0, 1, 0, 1` on consecutive SHIFT cycles.
+  - `ATTN_CLK` toggles high during each SHIFT cycle.
+  - `ATTN_LE` pulses high for 1 cycle after all bits are shifted.
+
+#### **Example 2: No New Data**
+- **Input**: 
+  - `reset = 1'b0`
+  - `data` remains unchanged.
+- **Expected Output**: 
+  - `ATTN_DATA = 1'b0`
+  - `ATTN_CLK = 1'b0`
+  - `ATTN_LE = 1'b0`
+
+---
+
+### FSM State Description
+| **State**  | **Description**                                                |
+|------------|----------------------------------------------------------------|
+| `IDLE`     | The module waits for `data` to change.                         |
+| `LOAD`     | Captures the new 5-bit control word into a shift register.     |
+| `SHIFT`    | Outputs bits serially via `ATTN_DATA` while toggling `ATTN_CLK`.|
+| `LATCH`    | Pulses `ATTN_LE` to latch the shifted data into the attenuator.|
+
+---
+
+### Partial Code:
+```systemverilog
+module Attenuator (
+    input        clk,
+    input        reset,
+    input  [4:0] data,
+    output reg   ATTN_CLK,
+    output reg   ATTN_DATA,
+    output reg   ATTN_LE
+);
+
+// Internal Signals
+reg        clk_div2;
+reg  [1:0] current_state, next_state;
+reg  [4:0] shift_reg;
+reg  [2:0] bit_count;
+reg  [4:0] old_data;
+
+// Parameters for FSM States
+localparam IDLE  = 2'b00,
+           LOAD  = 2'b01,
+           SHIFT = 2'b10,
+           LATCH = 2'b11;
+
+// Reset Condition
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        clk_div2 <= 1'b0;
+        current_state <= IDLE;
+        ATTN_CLK      <= 1'b0;
+        ATTN_DATA     <= 1'b0;
+        ATTN_LE       <= 1'b0;
+        shift_reg     <= 5'b00000;
+        bit_count     <= 3'd0;
+        old_data      <= 5'b00000;
+    end else begin
+        // Complete logic here
+    end
+end
+```
+---

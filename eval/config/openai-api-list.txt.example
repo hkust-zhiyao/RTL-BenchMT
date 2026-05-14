@@ -1,0 +1,5 @@
+# HKUST Azure OpenAI API key list. Copy this file to openai-api-list.txt
+# and add one key per non-comment line. The first usable key is used.
+# Override with the AZURE_OPENAI_API_KEY environment variable.
+
+# your-azure-openai-key-here

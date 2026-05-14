@@ -1,0 +1,50 @@
+Complete the given partial SystemVerilog module `binary_to_gray` to implement the Binary to Gray Code Converter. The Binary to Gray Code Converter translates an **N-bit binary input** into its equivalent **N-bit Gray code output** using combinational logic. Gray code is a binary numeral system with only one-bit changes between successive values, particularly useful for reducing digital transitions.
+
+This design uses XOR operations to compute the Gray code. The **most significant bit (MSB)** of the Gray code is the same as the MSB of the binary input, while each subsequent Gray code bit is the XOR of the current and the previous binary bits.
+
+## Functionality
+  - Gray code ensures that only one-bit changes between successive numbers, reducing the likelihood of multiple-bit errors during state transitions.
+  - Each subsequent Gray code bit is computed as the XOR of the corresponding binary bit and the preceding binary bit.
+  - The design uses combinational logic, ensuring the Gray code output updates immediately when the binary input changes.
+
+## Algorithm
+### Step 1: Initialize the Input
+- The input is a binary width number **N** (Minimum value of N is 2)
+- The output will also be an N-bit value, representing the equivalent Gray code.
+
+### Step 2: Compute the Gray Code
+1. The MSB of the Gray code (\(G[N-1]\)) is directly assigned as the MSB of the binary input (\(B[N-1]\)).
+2. For all other bits:
+   [ G[i] = B[i+1] ^ B[i],  for  i = N-2 to 0 ]
+
+### Step 3: Assign the Gray Code Output
+- The computed Gray code is assigned to the `gray_out` signal.
+
+## Example Computation
+Assume the input as `binary_in = 1101` (4 bits).
+
+### Step-by-Step Conversion:
+1. **MSB**:  (`gray_out[3]` = `binary_in[3]` = 1)
+2. **Next bit**: (`gray_out[2]` = `binary_in[3]`   ^  `binary_in[2]` = 1 ^1 = 0)
+3. **Next bit**: (`gray_out[1]` = `binary_in[2]`  ^  `binary_in[1]` = 1 ^ 0 = 1)
+4. **LSB**: (`gray_out[0]` = `binary_in[1]` ^ `binary_in[0]` = 0 ^ 1 = 1)
+
+**Final Gray Code Output**: `gray_out = 1011`
+
+## Partial SystemVerilog Code
+
+```SystemVerilog
+module binary_to_gray #(
+    parameter WIDTH = 6  // Define the bit width of the input
+) (
+    input  wire [WIDTH-1:0] binary_in,  // Binary input
+    output wire [WIDTH-1:0] gray_out    // Gray code output
+);
+
+assign  gray_out[WIDTH-1] = binary_in[WIDTH-1];  // MSB is the same
+
+generate
+// Insert code here for XOR operation to calculate remaining bits
+
+
+endmodule

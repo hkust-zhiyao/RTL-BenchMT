@@ -1,0 +1,71 @@
+Complete the given partial SystemVerilog RTL code for the arithmetic_progression_generator module. The module generates an arithmetic progression sequence based on configurable parameters: DATA_WIDTH (width of the input data), SEQUENCE_LENGTH (number of terms to generate), and WIDTH_OUT_VAL (width of output) which needs to be calculated to avoid overflow. The module accepts a start_val (initial value) and step_size (difference between terms) as inputs, generating one term per clock cycle. The sequence stops when all terms are generated, asserting the active-high done signal, which remains asserted until reset is applied.  
+
+The module uses the positive edge of the clock for its internal operation and an active-low reset (resetn) to clear its internal state. When reset is asserted, the module initializes its output and counters. It has a latency of 1 clock cycle which means during normal operation, the sequence generation begins when enable is high, and the output data is available after 1 clock cycle. If enable goes low during operation, the module should pause and resume sequence generation without restarting. The output (out_val) must remain constant during pauses.
+
+The active-high done signal is asserted when the SEQUENCE_LENGTH is reached and remains asserted until a reset is applied, with out_val holding the final value of the sequence.
+
+Partial code:
+```verilog
+module arithmetic_progression_generator #(
+    parameter DATA_WIDTH = 16,  // Width of the input data
+    parameter SEQUENCE_LENGTH = 10 // Number of terms in the progression
+)(
+    clk,
+    resetn,
+    enable,
+    start_val,
+    step_size,
+    out_val,
+    done
+);
+  // ----------------------------------------
+  // - Local parameter definition
+  // ----------------------------------------
+
+    //Insert code here to calculate parameter WIDTH_OUT_VAL to handle the out_val bit width to avoid overflow.
+
+  // ----------------------------------------
+  // - Interface Definitions
+  // ----------------------------------------
+    input logic clk;                          // Clock signal
+    input logic resetn;                       // Active-low reset
+    input logic enable;                       // Enable signal for the generator
+    input logic [DATA_WIDTH-1:0] start_val;   // Start value of the sequence
+    input logic [DATA_WIDTH-1:0] step_size;   // Step size of the sequence
+    output logic [WIDTH_OUT_VAL-1:0] out_val; // Current value of the sequence
+    output logic done;                        // High when sequence generation is complete
+
+
+  // ----------------------------------------
+  // - Internal signals
+  // ----------------------------------------
+    logic [WIDTH_OUT_VAL-1:0] current_val;  // Register to hold the current value
+    logic [$clog2(SEQUENCE_LENGTH)-1:0] counter;  // Counter to track sequence length
+
+  // ----------------------------------------
+  // - Procedural block
+  // ----------------------------------------
+ always_ff @(posedge clk or negedge resetn) begin
+        if (!resetn) begin
+            current_val <= 0;
+            counter <= 0;
+            done <= 1'b0;
+        end else if (enable) begin
+            if (!done) begin
+                    // Insert code here to compute current_val 
+                end else begin
+                    // Insert code here to assert the `done` signal when the sequence is complete
+                end
+            end
+        end
+    end
+
+  // ----------------------------------------
+  // - Combinational Assignments
+  // ----------------------------------------
+    assign out_val = current_val;
+
+endmodule
+
+
+```

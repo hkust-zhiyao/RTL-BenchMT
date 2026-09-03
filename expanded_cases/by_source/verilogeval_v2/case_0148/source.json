@@ -1,0 +1,30 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "93563fc3ecec7a35eec28f4a4ed1e09393cf21ab8ae3c57cd0de1219bf1f0e8d",
+  "original_rtl_sha256": "e31ed6b179de4a33384b70182dc83a894ba4db0da08ab72945f3dd6f60788e06",
+  "schema_version": "1.0",
+  "source_case_id": "case_0148",
+  "task_id": "VerilogEvalHumanV2-ece241_2013_q4",
+  "top_module": "TopModule",
+  "variant_count": 3,
+  "variants": [
+    {
+      "case_id": "VE2_case_0148_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0148/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "VE2_case_0148_control_signal_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0148/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "VE2_case_0148_state_transition_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0148/variants/state_transition_behavior",
+      "shift_category": "state_transition_behavior",
+      "shift_strategy": "redirect_state_transition"
+    }
+  ]
+}

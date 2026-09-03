@@ -1,0 +1,24 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "dce83b147548e93047df2125ac9c3e39d1d211fc5db3a3d029bd872d4fe96041",
+  "original_rtl_sha256": "5df164fd820436852f95bc1ee0067a09412148acea85b288cb7c0a8bcb0ac630",
+  "schema_version": "1.0",
+  "source_case_id": "case_0038",
+  "task_id": "VerilogEvalHumanV2-always_if",
+  "top_module": "TopModule",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "VE2_case_0038_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0038/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "VE2_case_0038_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0038/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    }
+  ]
+}

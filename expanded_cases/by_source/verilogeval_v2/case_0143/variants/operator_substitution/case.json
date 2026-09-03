@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0143_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h7 | q[i*16+j]) != 3'h3;",
+  "old_fragment": "q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h7 | q[i*16+j]) == 3'h3;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "c2a83a32c89440eede4cf1f06b01551a3dc75ba5b4a68d625f49a1b12b6f6b8c",
+  "source_case_id": "case_0143",
+  "source_rtl_sha256": "ae55a613d8532489d5643a6b72f462da5dda4b6d10838de2f3c09dfc7a8c1820",
+  "task_id": "VerilogEvalHumanV2-conwaylife",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

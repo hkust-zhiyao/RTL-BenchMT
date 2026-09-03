@@ -1,0 +1,18 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "1954c3423a7b44db16ffb15bb7491ef2d2bf857cc89430ec4670a03a450c662a",
+  "original_rtl_sha256": "9dfc4024aed682d339614cb11f2035bfe554c866665510615dc74a1522d4c9b5",
+  "schema_version": "1.0",
+  "source_case_id": "case_0098",
+  "task_id": "VerilogEvalHumanV2-m2014_q6c",
+  "top_module": "TopModule",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "VE2_case_0098_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0098/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    }
+  ]
+}

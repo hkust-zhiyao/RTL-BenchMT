@@ -1,0 +1,36 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "81d819692c9df2fbf8664a882cc319ba0baee22876c69e4e4ea02ba35c382db3",
+  "original_rtl_sha256": "0d8037af028cf6186de5f19a962883b1d061e4583cb85ea5aa97d53d6513372d",
+  "schema_version": "1.0",
+  "source_case_id": "case_0013",
+  "task_id": "RTLLMv2-multi_pipe_4bit",
+  "top_module": "multi_pipe_4bit",
+  "variant_count": 4,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0013_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0013/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0013_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0013/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "RTLLM2_case_0013_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0013/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_less-than_with_greater-than"
+    },
+    {
+      "case_id": "RTLLM2_case_0013_register_progression",
+      "relative_path": "by_source/rtllm_v2/case_0013/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

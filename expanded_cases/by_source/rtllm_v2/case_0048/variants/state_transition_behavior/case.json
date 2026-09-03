@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0048_state_transition_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "state -> 2'b01",
+  "old_fragment": "state -> 2'b0",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "state_transition_behavior",
+  "shift_strategy": "redirect_state_transition",
+  "shifted_rtl_sha256": "c2af4b19ef80f76c2f0d8e047e546c8f8f733fbc2bd139979b3b3e5aea7081af",
+  "source_case_id": "case_0048",
+  "source_rtl_sha256": "ef8fb029d6d48f1560e3663dc7170b6638f8b050f6374ea2bd638145a3d5f503",
+  "task_id": "RTLLMv2-signal_generator",
+  "top_module": "signal_generator",
+  "validation_mode": "iverilog_compatibility_compile"
+}

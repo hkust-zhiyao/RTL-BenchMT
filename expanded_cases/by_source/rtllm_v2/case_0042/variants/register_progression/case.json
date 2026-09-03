@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0042_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "RAM[write_addr] <= (write_data) + 1'b1",
+  "old_fragment": "RAM[write_addr] <= write_data",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "84a38be66dd2c1268a2ce995486882f0170b5afd25b1165b385640f1d15cdf37",
+  "source_case_id": "case_0042",
+  "source_rtl_sha256": "ddaa3c540dadc1c1d2b6982d7b306e805be5e41c01a3b43ce7038c4aba98333e",
+  "task_id": "RTLLMv2-RAM",
+  "top_module": "RAM",
+  "validation_mode": "iverilog_compatibility_compile"
+}

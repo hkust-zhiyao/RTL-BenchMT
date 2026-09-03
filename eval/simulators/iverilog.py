@@ -9,7 +9,7 @@ Pass/fail parsing handles the conventions used by each upstream:
     The testbench prints `Mismatches: <n> in <total> samples` and finishes.
     Pass iff n == 0 (and at least one sample compared).
 
-  RTLLM v1.1
+  RTLLM v2.1
     The testbench prints either `===========Your Design Passed===========` /
     `Final mismatch ... ` / `Test passed` style strings — we use a small
     set of regexes biased toward the canonical formats.
@@ -53,7 +53,7 @@ class IverilogSimulator:
 
         dut_path.write_text(dut_code)
 
-        if bench == "rtllm_v1.1":
+        if bench == "rtllm_v2.1":
             tb_text = record.get("testbench", "")
         else:
             tb_text = record.get("test", "")
@@ -124,7 +124,7 @@ def _judge(bench: str, output: str) -> bool:
         n_mis, n_total = int(m.group(1)), int(m.group(2))
         return n_mis == 0 and n_total > 0
 
-    if bench == "rtllm_v1.1":
+    if bench == "rtllm_v2.1":
         # RTLLM's testbenches print a small number of conventional markers.
         # We require an explicit pass marker AND no "fail/error" marker.
         out_lower = output.lower()

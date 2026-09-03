@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0074_branch_selection",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "!(areset)",
+  "old_fragment": "areset",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "branch_selection",
+  "shift_strategy": "invert_branch_condition",
+  "shifted_rtl_sha256": "47ee71f1acdfd8e06a980f07431a32aaf02ce31c0c50377876637b74aff2b18f",
+  "source_case_id": "case_0074",
+  "source_rtl_sha256": "eb3bcfc472f3979166157b577fa6ecae67722ae22eafd409a57b35c92590d0b7",
+  "task_id": "VerilogEvalHumanV2-counter_2bc",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

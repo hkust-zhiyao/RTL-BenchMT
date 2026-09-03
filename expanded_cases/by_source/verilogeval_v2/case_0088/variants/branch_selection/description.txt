@@ -1,0 +1,18 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  clk
+ - input  areset
+ - input  x
+ - output z
+
+The module should implement a three-state Moore machine with an altered state-A transition. The input (x) is a series of bits (one
+per clock cycle) beginning with the least-significant bit of the number,
+and output Z remains the state-C decode. From state A, input 0 moves to C and input 1 remains in A. The machine will
+accept input numbers of arbitrary length. The circuit requires a positive
+edge triggered asynchronous reset. The conversion begins when Reset is
+released and stops when Reset is asserted. Assume all sequential logic is
+triggered on the positive edge of the clock.
+

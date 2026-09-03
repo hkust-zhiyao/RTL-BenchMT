@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0002_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign c4 = Gm1 ^ (Pm1 | c0), c8 = Gm2 ^ (Pm2 & Gm1) ^ (Pm2 & Pm1 & c0), c12 = Gm3 ^ (Pm3 & Gm2) ^ (Pm3 & Pm2 & Gm1) ^ (Pm3 & Pm2 & Pm1 & c0);",
+  "old_fragment": "assign c4 = Gm1 ^ (Pm1 & c0), c8 = Gm2 ^ (Pm2 & Gm1) ^ (Pm2 & Pm1 & c0), c12 = Gm3 ^ (Pm3 & Gm2) ^ (Pm3 & Pm2 & Gm1) ^ (Pm3 & Pm2 & Pm1 & c0);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "b014645665cc1d2f80375f65144ca204b3047d39ecf8397bfaafe8721ebb8831",
+  "source_case_id": "case_0002",
+  "source_rtl_sha256": "a5529a8fe85748de646ebf34da72cd9fdc5457f706101b3c77fd7f17ef26d57a",
+  "task_id": "RTLLMv2-adder_32bit",
+  "top_module": "adder_32bit",
+  "validation_mode": "iverilog_compatibility_compile"
+}

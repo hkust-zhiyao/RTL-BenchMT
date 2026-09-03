@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0099_state_transition_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "next_state -> in ? B : C",
+  "old_fragment": "next_state -> in ? B : A",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "state_transition_behavior",
+  "shift_strategy": "redirect_state_transition",
+  "shifted_rtl_sha256": "d96bb7a5123106f3e4dfe53c304dd75d13aad42964f0833b6fa5dcb82b0b07d5",
+  "source_case_id": "case_0099",
+  "source_rtl_sha256": "d4a2719711748110fc288874c24d0c73a42a3edbc687e0a8aae8c6b7e1665c1e",
+  "task_id": "VerilogEvalHumanV2-fsm3comb",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

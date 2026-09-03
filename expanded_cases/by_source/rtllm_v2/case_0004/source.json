@@ -1,0 +1,24 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "b38196c578dd6285cb2fefbd693b63098509818f5c9d206481b70fdbe13c8c36",
+  "original_rtl_sha256": "7bc3695726c0dc21f88fb6752e092dfb781eee82974af1e1f5e371986fd8c779",
+  "schema_version": "1.0",
+  "source_case_id": "case_0004",
+  "task_id": "RTLLMv2-adder_bcd",
+  "top_module": "adder_bcd",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0004_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0004/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0004_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0004/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_greater-than_with_less-than"
+    }
+  ]
+}

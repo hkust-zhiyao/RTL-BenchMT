@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0152_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "predict_history_r <= ({predict_history_r, predict_taken}) + 1'b1",
+  "old_fragment": "predict_history_r <= {predict_history_r, predict_taken}",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "b793c5e0e7dd025d086e5ecf504023be5831d961e509ee4a857984ef48381e1b",
+  "source_case_id": "case_0152",
+  "source_rtl_sha256": "12d54877b5d0a2e71bc084cbc79c8b68363d2a739b073969f7e2221da6b38a98",
+  "task_id": "VerilogEvalHumanV2-gshare",
+  "top_module": "TopModule",
+  "validation_mode": "baseline_equivalent_elaboration_limitation"
+}

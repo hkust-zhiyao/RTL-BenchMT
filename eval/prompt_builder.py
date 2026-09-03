@@ -39,7 +39,7 @@ def build_prompt(bench, record, variant="fixed"):
                     or record.get("prompt", ""))
         return DEFAULT_SYSTEM, user
 
-    if bench == "rtllm_v1.1":
+    if bench == "rtllm_v2.1":
         if variant == "fixed":
             user = record.get("design_prompt", "")
         else:

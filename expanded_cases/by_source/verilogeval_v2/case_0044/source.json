@@ -1,0 +1,24 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "a324f434e49d6794fda35448ea1674d2090797c71c0734c8796d468789efb98a",
+  "original_rtl_sha256": "8b54c0faa026c483b2eb6fdd30f131e954366022d5d951a1ccd343e057f58df8",
+  "schema_version": "1.0",
+  "source_case_id": "case_0044",
+  "task_id": "VerilogEvalHumanV2-edgedetect2",
+  "top_module": "TopModule",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "VE2_case_0044_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0044/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise XOR_with_bitwise AND"
+    },
+    {
+      "case_id": "VE2_case_0044_register_progression",
+      "relative_path": "by_source/verilogeval_v2/case_0044/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

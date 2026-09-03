@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0021_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "state <= (8'b0000_0001) + 1'b1",
+  "old_fragment": "state <= 8'b0000_0001",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "5ae57221fdb63d40c4eef157a4163837869f156a4f5cbcc662b32af3e0410095",
+  "source_case_id": "case_0021",
+  "source_rtl_sha256": "7697be7e93b8d745acfb86073a28a495b9876b6fb25c673fae427238fb5de62a",
+  "task_id": "RTLLMv2-ring_counter",
+  "top_module": "ring_counter",
+  "validation_mode": "iverilog_compatibility_compile"
+}

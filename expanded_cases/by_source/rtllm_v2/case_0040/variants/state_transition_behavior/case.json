@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0040_state_transition_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "state -> s1_red",
+  "old_fragment": "state -> idle",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "state_transition_behavior",
+  "shift_strategy": "redirect_state_transition",
+  "shifted_rtl_sha256": "4b2c3f4c3db3a1fd7229ec1a779995d858b9f3979908b7d57881d42a88dad7a8",
+  "source_case_id": "case_0040",
+  "source_rtl_sha256": "f4fe30d2867d48011e1c9d459b318d3cae99ed1959cfb419317d98708a9e89bc",
+  "task_id": "RTLLMv2-traffic_light",
+  "top_module": "traffic_light",
+  "validation_mode": "iverilog_compatibility_compile"
+}

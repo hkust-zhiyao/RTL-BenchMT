@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0016_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "if(a[N-1] != b[N-1]) begin res[N-2:0] = a[N-2:0] - b[N-2:0];",
+  "old_fragment": "if(a[N-1] == b[N-1]) begin res[N-2:0] = a[N-2:0] - b[N-2:0];",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "384b7c78146e3d05045faf12e3adade002cb70bdb177c568e9f3b0300fe61df2",
+  "source_case_id": "case_0016",
+  "source_rtl_sha256": "ec8a083638dbd36009fa8dea9ebcfc6e080c8bd781905576a597edb70857c7ca",
+  "task_id": "RTLLMv2-fixed_point_substractor",
+  "top_module": "fixed_point_substractor",
+  "validation_mode": "iverilog_compatibility_compile"
+}

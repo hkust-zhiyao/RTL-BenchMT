@@ -1,0 +1,22 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  x3
+ - input  x2
+ - input  x1
+ - output f
+
+The module should implement a combinational circuit for the following
+truth table:
+
+  x3 | x2 | x1 | f
+  0  | 0  | 0  | 0
+  0  | 0  | 1  | 0
+  0  | 1  | 0  | 1
+  0  | 1  | 1  | 1
+  1  | 0  | 0  | 0
+  1  | 0  | 1  | 1
+  1  | 1  | 0  | 0
+  1  | 1  | 1  | 1 f is high when x3 is low or when x2 is high and x1 is low, and also for the input combinations low-high-high, high-low-high, and high-high-high.

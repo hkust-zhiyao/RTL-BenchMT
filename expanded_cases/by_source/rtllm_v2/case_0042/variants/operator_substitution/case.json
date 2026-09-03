@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0042_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "i > 8;",
+  "old_fragment": "i < 8;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_less-than_with_greater-than",
+  "shifted_rtl_sha256": "dc9967b4378afec5c2e65c3c245dfacfa035b6d5470d3b1c38b15ba79e47918b",
+  "source_case_id": "case_0042",
+  "source_rtl_sha256": "ddaa3c540dadc1c1d2b6982d7b306e805be5e41c01a3b43ce7038c4aba98333e",
+  "task_id": "RTLLMv2-RAM",
+  "top_module": "RAM",
+  "validation_mode": "iverilog_compatibility_compile"
+}

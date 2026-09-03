@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0045_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "# (PERIOD * 2) clk = ~clk;",
+  "old_fragment": "# (PERIOD / 2) clk = ~clk;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_division_with_multiplication",
+  "shifted_rtl_sha256": "4cd1143282c591613f658fee4bdbeeb47b28984c67c07ac3f7fc62f8a88b8699",
+  "source_case_id": "case_0045",
+  "source_rtl_sha256": "62129a458c3648cde000e1eb0ac149d3970b4160664012afbf6f662811e89a92",
+  "task_id": "RTLLMv2-clkgenerator",
+  "top_module": "clkgenerator",
+  "validation_mode": "iverilog_compatibility_compile"
+}

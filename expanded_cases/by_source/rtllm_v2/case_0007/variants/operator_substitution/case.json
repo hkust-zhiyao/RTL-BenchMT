@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0007_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign A_equal = (A != B);",
+  "old_fragment": "assign A_equal = (A == B);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "4ea96c809e7abd741414b9674663955e8886dd3aed2ffce2c5969c1f838e63fa",
+  "source_case_id": "case_0007",
+  "source_rtl_sha256": "abb2225be214b06f6c295b7ca88eb7893d468f0581cda978422792f5780dcefe",
+  "task_id": "RTLLMv2-comparator_4bit",
+  "top_module": "comparator_4bit",
+  "validation_mode": "iverilog_compatibility_compile"
+}

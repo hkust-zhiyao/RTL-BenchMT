@@ -1,0 +1,19 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  a   (16 bits)
+ - input  b   (16 bits)
+ - input  c   (16 bits)
+ - input  d   (16 bits)
+ - input  e   (16 bits)
+ - input  f   (16 bits)
+ - input  g   (16 bits)
+ - input  h   (16 bits)
+ - input  i   (16 bits)
+ - input  sel ( 4 bits)
+ - output out (16 bits)
+
+The module is a 16-bit-wide multiplexer in which sel values 15 through 7 choose a through i, respectively. For sel values 0 through 6, set every output bit to 1.
+

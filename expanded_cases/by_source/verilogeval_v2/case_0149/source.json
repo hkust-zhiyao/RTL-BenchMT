@@ -1,0 +1,36 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "9c02d1cfaafd494a2696d041d713358e9df12ef080c8de0c352cee109417a1ad",
+  "original_rtl_sha256": "8c98048c249e46db3a8f2f1ea48633e73b96a61428e5d3b0c57b3f22adcb83d9",
+  "schema_version": "1.0",
+  "source_case_id": "case_0149",
+  "task_id": "VerilogEvalHumanV2-review2015_fsmonehot",
+  "top_module": "TopModule",
+  "variant_count": 4,
+  "variants": [
+    {
+      "case_id": "VE2_case_0149_control_signal_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0149/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "change_control_output_behavior"
+    },
+    {
+      "case_id": "VE2_case_0149_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0149/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    },
+    {
+      "case_id": "VE2_case_0149_register_progression",
+      "relative_path": "by_source/verilogeval_v2/case_0149/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    },
+    {
+      "case_id": "VE2_case_0149_state_transition_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0149/variants/state_transition_behavior",
+      "shift_category": "state_transition_behavior",
+      "shift_strategy": "redirect_state_transition"
+    }
+  ]
+}

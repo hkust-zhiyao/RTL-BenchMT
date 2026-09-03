@@ -1,0 +1,18 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "e9ac7787a9eb802b78b21b7b79b90df2aa137e9ccab9c11e7175eae7e010d234",
+  "original_rtl_sha256": "239672bcaa22524d777b1fa180695033550e19a10990aaeb47319673cc318892",
+  "schema_version": "1.0",
+  "source_case_id": "case_0112",
+  "task_id": "VerilogEvalHumanV2-2012_q1g",
+  "top_module": "TopModule",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "VE2_case_0112_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0112/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_case_selector"
+    }
+  ]
+}

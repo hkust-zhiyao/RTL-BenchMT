@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0027_control_signal_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "~(rst)",
+  "old_fragment": "rst",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "control_signal_behavior",
+  "shift_strategy": "invert_control_signal_polarity",
+  "shifted_rtl_sha256": "bec8881cd91a80013568a529698f6c52ceb90efd140a559716ad11cac856b392",
+  "source_case_id": "case_0027",
+  "source_rtl_sha256": "445e1e00eb81aee75b6d7fdd76695c9b2ae73ac9c5105615f75d4b9f2c57af77",
+  "task_id": "RTLLMv2-LFSR",
+  "top_module": "LFSR",
+  "validation_mode": "iverilog_compatibility_compile"
+}

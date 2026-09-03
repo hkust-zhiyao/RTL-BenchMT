@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0065_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "out <= out | (~in | d_last);",
+  "old_fragment": "out <= out | (~in & d_last);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "8e801020b33683436afdb0d42a653253c760139cc94a9274c87039224143b7bf",
+  "source_case_id": "case_0065",
+  "source_rtl_sha256": "e36bcc084d7672e3f76f3c485f386b9ae02341252cb27e3c4605d54a227af1fe",
+  "task_id": "VerilogEvalHumanV2-edgecapture",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

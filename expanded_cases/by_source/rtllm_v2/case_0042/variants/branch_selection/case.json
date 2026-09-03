@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0042_branch_selection",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "!(!rst_n)",
+  "old_fragment": "!rst_n",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "branch_selection",
+  "shift_strategy": "invert_branch_condition",
+  "shifted_rtl_sha256": "320a35e929152c36e057addbf6d46746bd90f4cc3aa3325b162c593123e467dd",
+  "source_case_id": "case_0042",
+  "source_rtl_sha256": "ddaa3c540dadc1c1d2b6982d7b306e805be5e41c01a3b43ce7038c4aba98333e",
+  "task_id": "RTLLMv2-RAM",
+  "top_module": "RAM",
+  "validation_mode": "iverilog_compatibility_compile"
+}

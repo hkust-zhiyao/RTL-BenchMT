@@ -54,23 +54,24 @@ python3 eval/evaluate.py --bench verilogeval_human_v1 --variant fixed \
 # 3. Real run with GPT-4o-mini on the V1 fixed prompts
 python3 eval/evaluate.py --bench verilogeval_human_v1 --variant fixed \
     --llm azure_gpt4o_mini --only-fixed-records \
-    --output results/v1_fixed.jsonl
+    --output /tmp/rtl-benchmt-v1-fixed.jsonl
 
 # 4. Compare against original V1 prompts
 python3 eval/evaluate.py --bench verilogeval_human_v1 --variant original \
     --llm azure_gpt4o_mini --only-fixed-records \
-    --output results/v1_original.jsonl
+    --output /tmp/rtl-benchmt-v1-original.jsonl
 
 # 5. Aggregate
-cat results/*.jsonl > results/all.jsonl
-python3 eval/evaluate.py --summarize results/all.jsonl
+cat /tmp/rtl-benchmt-v1-fixed.jsonl /tmp/rtl-benchmt-v1-original.jsonl \
+    > /tmp/rtl-benchmt-all.jsonl
+python3 eval/evaluate.py --summarize /tmp/rtl-benchmt-all.jsonl
 ```
 
 ## CLI flags
 
 | flag | meaning |
 |---|---|
-| `--bench` | `verilogeval_human_v1` / `verilogeval_human_v2` / `verilogeval_machine_v1` / `rtllm_v1.1` / `cvdp_cid002` / `cvdp_cid003` |
+| `--bench` | `verilogeval_human_v1` / `verilogeval_human_v2` / `verilogeval_machine_v1` / `rtllm_v2.1` / `cvdp_cid002` / `cvdp_cid003` |
 | `--variant` | `fixed` (revised by the agentic pipeline) or `original` (upstream) |
 | `--llm` | `azure_gpt4o_mini` / `azure_gpt4o` / `canonical` (cheats, sanity-test) / `stub` / your own (see below) |
 | `--simulator` | `iverilog` (default for VE / RTLLM) / `cocotb_iverilog` (default for CVDP) / your own |
@@ -112,7 +113,7 @@ What the LLM actually sees, per benchmark:
 | VerilogEval Human v1 | `detail_description + "\n\n" + prompt` |
 | VerilogEval Human v2 | `instruction` |
 | VerilogEval Machine v1 | `detail_description + "\n\n" + prompt` (same layout as Human v1) |
-| RTLLM v1.1 | `design_prompt` |
+| RTLLM v2.1 | `design_prompt` |
 | CVDP cid002 / cid003 | `input.prompt` |
 
 When `--variant fixed`, the framework reads the revised field; when
@@ -125,7 +126,7 @@ Defaults the `iverilog` simulator uses:
 
 - **VerilogEval (Human v1, v2, Machine v1)**: testbench prints
   `Mismatches: 0 in N samples` with N > 0.
-- **RTLLM v1.1**: testbench prints a conventional pass marker
+- **RTLLM v2.1**: testbench prints a conventional pass marker
   (`Your Design Passed`, `Test passed`, `error = 0`) with no fail marker.
 - **CVDP** (cocotb): pass iff `results.xml` has at least one `<testcase>`
   and zero `<failure>` / `<error>` children.

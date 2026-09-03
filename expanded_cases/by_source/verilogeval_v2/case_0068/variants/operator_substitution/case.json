@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0068_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign f = ( ~x3 | x2 & ~x1 ) | ( ~x3 & x2 & x1 ) | ( x3 & ~x2 & x1 ) | ( x3 & x2 & x1 ) ;",
+  "old_fragment": "assign f = ( ~x3 & x2 & ~x1 ) | ( ~x3 & x2 & x1 ) | ( x3 & ~x2 & x1 ) | ( x3 & x2 & x1 ) ;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "12f8cabbadc1d00331628dc2c9b22cee525dc0f7a2f6184a1ebb773d979438f9",
+  "source_case_id": "case_0068",
+  "source_rtl_sha256": "4eb73956209794bdbb8b183514aa9cbd47ea71c54261c4a60fcebe2f8491af8b",
+  "task_id": "VerilogEvalHumanV2-truthtable1",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

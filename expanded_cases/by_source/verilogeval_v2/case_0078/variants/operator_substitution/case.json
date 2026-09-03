@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0078_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign next_state[A] = (state[A] | state[C]) | ~in;",
+  "old_fragment": "assign next_state[A] = (state[A] | state[C]) & ~in;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "c1615704165553ec0df96b98be4125ba140a987b825a546fb7d7d062ef6a9a3b",
+  "source_case_id": "case_0078",
+  "source_rtl_sha256": "0dd374e8dee82065d86e5dac85d17d78f323bc8cf511f465887b046ac0dd6795",
+  "task_id": "VerilogEvalHumanV2-fsm3onehot",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

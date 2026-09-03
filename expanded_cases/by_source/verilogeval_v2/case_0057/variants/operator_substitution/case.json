@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0057_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign out_assign = a & b;",
+  "old_fragment": "assign out_assign = a ^ b;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise XOR_with_bitwise AND",
+  "shifted_rtl_sha256": "a1413255833fc3fa858a2f93e0aa9aba5be25bdf01e535cdf9fd67b31da5cec8",
+  "source_case_id": "case_0057",
+  "source_rtl_sha256": "392bc7b761c4c825747e1b85b0dcb9ebb37a6ef14844f807daf992ddd56bf7b6",
+  "task_id": "VerilogEvalHumanV2-alwaysblock2",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

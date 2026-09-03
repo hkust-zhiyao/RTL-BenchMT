@@ -1,0 +1,18 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "48f1483db542ce225ab8bbbf8e20e79ab47a5dcf1775ff194ecda1f439aec852",
+  "original_rtl_sha256": "a5529a8fe85748de646ebf34da72cd9fdc5457f706101b3c77fd7f17ef26d57a",
+  "schema_version": "1.0",
+  "source_case_id": "case_0002",
+  "task_id": "RTLLMv2-adder_32bit",
+  "top_module": "adder_32bit",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0002_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0002/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+Please act as a professional Verilog designer.
+
+A frequency divider that divides the input clock frequency by fractional values. It generates a clock signal with a fractional frequency division (3.5x), using the double-edge clocking technique to achieve half-integer division while adjusting for duty cycle imbalance. By dividing uneven clock cycles and phase-shifting them, a smooth fractional clock output is produced.
+
+Module name: 
+    freq_divbyfrac
+
+Input ports:
+    clk: Input clock signal.
+    rst_n: Active low reset signal to initialize the module.
+    
+Output ports:
+    clk_div: Fractionally divided clock output.
+
+Implementation:
+The module performs fractional frequency division by counting clock cycles and generating intermediate divided clock signals. For 3.5x division:
+The counter cycles through 7 half clock steps (MUL2_DIV_CLK = 7).
+It generates one divided clock pulse on the positive edge of clk, and another adjusted pulse on the negative edge of clk.
+The negative-edge pulse extends the output by half a source clock cycle, so the final output has the required 3.5x division period. The positive-edge intermediate clock is high when cnt is 0 or (MUL2_DIV_CLK/2)+1 and low otherwise. The negative-edge intermediate clock is high when cnt is 1 or (MUL2_DIV_CLK/2)+1 and low otherwise.
+In each divided clock period, clk_div keeps high for the first 3 half clock steps and keeps low for the next 4 half clock steps.
+Finally, the two intermediate clocks are logically OR-ed to produce the final fractional divided clock output.
+The active low reset signal rst_n asynchronously initializes the counter and the intermediate clock signals to 0.
+
+Give me the complete code.

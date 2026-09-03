@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0044_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "anyedge <= in & d_last;",
+  "old_fragment": "anyedge <= in ^ d_last;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise XOR_with_bitwise AND",
+  "shifted_rtl_sha256": "0eba957b0f1b7ff5698bc2c20a4b44986e3316bd8a8163b08161fd2169df6629",
+  "source_case_id": "case_0044",
+  "source_rtl_sha256": "8b54c0faa026c483b2eb6fdd30f131e954366022d5d951a1ccd343e057f58df8",
+  "task_id": "VerilogEvalHumanV2-edgedetect2",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

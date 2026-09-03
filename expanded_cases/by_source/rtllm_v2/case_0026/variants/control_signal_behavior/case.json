@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0026_control_signal_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "~(EN) == 0",
+  "old_fragment": "EN == 0",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "control_signal_behavior",
+  "shift_strategy": "invert_control_signal_polarity",
+  "shifted_rtl_sha256": "a704729d66a038a744300cd8141ee71d4cd7d01dd9489502d6aa80cde97ae91a",
+  "source_case_id": "case_0026",
+  "source_rtl_sha256": "4a5d18d894a4474494e5d06b90d237843b601b05d2cb9acaf532c4f7315bf5a6",
+  "task_id": "RTLLMv2-LIFObuffer",
+  "top_module": "LIFObuffer",
+  "validation_mode": "iverilog_compatibility_compile"
+}

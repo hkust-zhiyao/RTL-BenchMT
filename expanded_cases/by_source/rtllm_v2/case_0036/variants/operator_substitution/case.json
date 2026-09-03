@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0036_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "if (cnt != 'd3) begin data <= d;",
+  "old_fragment": "if (cnt == 'd3) begin data <= d;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "14a1f68517400f5ff43da0d307f2e27b489d955a2ee6ec0c8ebca6d28939b43a",
+  "source_case_id": "case_0036",
+  "source_rtl_sha256": "730ebfdfce685f046173499418944f1d0cf07a8bc99f9f9f85abbbbaebeb1e1e",
+  "task_id": "RTLLMv2-parallel2serial",
+  "top_module": "parallel2serial",
+  "validation_mode": "iverilog_compatibility_compile"
+}

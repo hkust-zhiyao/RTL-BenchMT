@@ -1,0 +1,24 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "66ab950ad70efc33e0599cf07644a4fabd6cf4fc2b90c91099ce229ec85c0415",
+  "original_rtl_sha256": "3735cd6a576c3ab365e0b42bcd95198b6ce609792a0ad7cb1765e12667417436",
+  "schema_version": "1.0",
+  "source_case_id": "case_0061",
+  "task_id": "VerilogEvalHumanV2-bugs_mux2",
+  "top_module": "TopModule",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "VE2_case_0061_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0061/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "VE2_case_0061_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0061/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "change_ternary_selector_polarity"
+    }
+  ]
+}

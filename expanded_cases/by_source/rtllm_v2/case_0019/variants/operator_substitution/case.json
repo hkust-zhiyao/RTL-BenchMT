@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0019_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "rst_n",
+  "old_fragment": "!rst_n",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_negated_predicate_with_positive_predicate",
+  "shifted_rtl_sha256": "ab0c59842c5b3f1449ef3e2443a69278dd0accf228f2c331a1568559da0d21c3",
+  "source_case_id": "case_0019",
+  "source_rtl_sha256": "063822c3c64f8e0e0cf66dc1e1e06edfd48571e01dc73b728ac2aed225c4b48b",
+  "task_id": "RTLLMv2-JC_counter",
+  "top_module": "JC_counter",
+  "validation_mode": "iverilog_compatibility_compile"
+}

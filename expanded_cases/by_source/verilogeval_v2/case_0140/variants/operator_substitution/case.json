@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0140_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "{hh[7:0],mm[7:0],ss[7:0]}!=24'h115959, {hh[3:0],mm[7:0],ss[7:0]}==20'h95959, {mm[7:0],ss[7:0]}==16'h5959, {mm[3:0],ss[7:0]}==12'h959, ss[7:0]==8'h59, ss[3:0] == 4'h9, 1'b1};",
+  "old_fragment": "{hh[7:0],mm[7:0],ss[7:0]}==24'h115959, {hh[3:0],mm[7:0],ss[7:0]}==20'h95959, {mm[7:0],ss[7:0]}==16'h5959, {mm[3:0],ss[7:0]}==12'h959, ss[7:0]==8'h59, ss[3:0] == 4'h9, 1'b1};",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "b858e1f0d34833219c231bd88947398fe1ed6ba777f07bc15f2ddca508c2add4",
+  "source_case_id": "case_0140",
+  "source_rtl_sha256": "f5a25764de883c636b06856ea7e6a4628c1c5b69b004025da10e3ae205adcac4",
+  "task_id": "VerilogEvalHumanV2-count_clock",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0093_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign out_both[2:0] = in[2:0] | in[3:1];",
+  "old_fragment": "assign out_both[2:0] = in[2:0] & in[3:1];",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "56f28bd5daa0beee9904bb9385fd4de94768fc4c564218abff4ea2ab2bd08f29",
+  "source_case_id": "case_0093",
+  "source_rtl_sha256": "5a9bf7d169021df9c52559b115ec3aa89d26f68c3beefa85ed8f0b7a2b01cb0f",
+  "task_id": "VerilogEvalHumanV2-gatesv",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

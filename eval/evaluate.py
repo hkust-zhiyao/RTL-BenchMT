@@ -12,7 +12,7 @@ Quick start:
     # real run with HKUST Azure GPT-4o-mini
     python3 eval/evaluate.py --bench verilogeval_human_v1 --variant fixed \\
         --llm azure_gpt4o_mini --simulator iverilog \\
-        --output results/v1_fixed.jsonl
+        --output /tmp/rtl-benchmt-v1-fixed.jsonl
 
 Outputs one JSON line per task to --output (or stdout). Use --summarize
 on a results file to get per-bench / per-type / Δ aggregates.
@@ -71,7 +71,7 @@ class _CanonicalLLM:
                 if isinstance(v, str) and (k.endswith(".sv") or k.endswith(".v")):
                     return f"```verilog\n{v}\n```"
             return "```verilog\n// no canonical available for cvdp\n```"
-        if bench == "rtllm_v1.1":
+        if bench == "rtllm_v2.1":
             return f"```verilog\n{r.get('verified', '')}\n```"
         if bench == "verilogeval_human_v2":
             ref = r.get("reference", "").replace("RefModule", "TopModule")

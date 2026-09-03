@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0147_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign g[0] = (state != B);",
+  "old_fragment": "assign g[0] = (state == B);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "9b4d37dc781c8413cefec786b4c54022d0581e5ff178ab5d545727fd3e622859",
+  "source_case_id": "case_0147",
+  "source_rtl_sha256": "8d9517c9f3e10906de5849675419e92605b04ead1a1b74b0df6a7785ff5197d6",
+  "task_id": "VerilogEvalHumanV2-2013_q2afsm",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "27e82eb31a001a0c617f344a6c5a0b530de22c3643bead764124cf271bfc5aa1",
+  "original_rtl_sha256": "dbfdb5cbbbd3f15709ef5918308c5400839cedf66f3bcb97af48f9b0de986571",
+  "schema_version": "1.0",
+  "source_case_id": "case_0028",
+  "task_id": "RTLLMv2-barrel_shifter",
+  "top_module": "barrel_shifter",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0028_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0028/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    }
+  ]
+}

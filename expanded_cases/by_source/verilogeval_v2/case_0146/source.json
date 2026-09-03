@@ -1,0 +1,24 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "35e57c1d4031ba2a229da50b82c0b018de20cb9ab3e29afb6e25d927db5e9c49",
+  "original_rtl_sha256": "2dcf39be47b8847f2e6a831112633d3a917efd2ba45268488155a0d27dc8c9b7",
+  "schema_version": "1.0",
+  "source_case_id": "case_0146",
+  "task_id": "VerilogEvalHumanV2-circuit10",
+  "top_module": "TopModule",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "VE2_case_0146_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0146/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    },
+    {
+      "case_id": "VE2_case_0146_state_transition_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0146/variants/state_transition_behavior",
+      "shift_category": "state_transition_behavior",
+      "shift_strategy": "change_stored_state_value"
+    }
+  ]
+}

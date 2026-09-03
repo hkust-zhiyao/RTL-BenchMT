@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0014_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "sum[0] <= temp[0] - temp[1];",
+  "old_fragment": "sum[0] <= temp[0] + temp[1];",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_addition_with_subtraction",
+  "shifted_rtl_sha256": "d4517970f8439dbf9f6bb7d8bca34d4e79ea672b3f87252571f64adc7956449c",
+  "source_case_id": "case_0014",
+  "source_rtl_sha256": "c7b1f309806650b74c998ff3a1c4ae6afd60ebb66f746134aca0bc8ea5928192",
+  "task_id": "RTLLMv2-multi_pipe_8bit",
+  "top_module": "multi_pipe_8bit",
+  "validation_mode": "iverilog_compatibility_compile"
+}

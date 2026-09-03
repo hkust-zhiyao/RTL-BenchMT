@@ -1,0 +1,36 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "c39396bb8dada70508d378d8863a5da6d1a6adb8543f479ecdc58a957e9d9420",
+  "original_rtl_sha256": "7697be7e93b8d745acfb86073a28a495b9876b6fb25c673fae427238fb5de62a",
+  "schema_version": "1.0",
+  "source_case_id": "case_0021",
+  "task_id": "RTLLMv2-ring_counter",
+  "top_module": "ring_counter",
+  "variant_count": 4,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0021_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0021/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0021_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0021/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "RTLLM2_case_0021_register_progression",
+      "relative_path": "by_source/rtllm_v2/case_0021/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    },
+    {
+      "case_id": "RTLLM2_case_0021_state_transition_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0021/variants/state_transition_behavior",
+      "shift_category": "state_transition_behavior",
+      "shift_strategy": "redirect_state_transition"
+    }
+  ]
+}

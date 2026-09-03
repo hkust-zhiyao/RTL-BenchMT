@@ -1,0 +1,18 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "a91255bb26a231d440c6253235f5afc10a497eef0a4481953f945d1930560f27",
+  "original_rtl_sha256": "0a3746d0e25ec9ec94cdf9e78bd781f8b3657a2a3b8393985d5d0c5640671364",
+  "schema_version": "1.0",
+  "source_case_id": "case_0029",
+  "task_id": "RTLLMv2-right_shifter",
+  "top_module": "right_shifter",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0029_register_progression",
+      "relative_path": "by_source/rtllm_v2/case_0029/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

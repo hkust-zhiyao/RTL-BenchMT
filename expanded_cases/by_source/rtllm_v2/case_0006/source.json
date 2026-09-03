@@ -1,0 +1,24 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "977cd1b8e6b773df16de4fdca3f6dea30dc46455c82042ef20ec2948604b6c1b",
+  "original_rtl_sha256": "7f331b457a27a90ef781081ca3338218acbb8f640890f4a1676f9f8e21307407",
+  "schema_version": "1.0",
+  "source_case_id": "case_0006",
+  "task_id": "RTLLMv2-comparator_3bit",
+  "top_module": "comparator_3bit",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0006_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0006/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0006_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0006/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_equality_with_inequality"
+    }
+  ]
+}

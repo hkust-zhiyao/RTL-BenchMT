@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0026_branch_selection",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "!(SP)",
+  "old_fragment": "SP",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "branch_selection",
+  "shift_strategy": "invert_ternary_condition",
+  "shifted_rtl_sha256": "7c915af72dd0ff503b3f435e013bf34275538ad390d6e0bd16a38638890c3480",
+  "source_case_id": "case_0026",
+  "source_rtl_sha256": "4a5d18d894a4474494e5d06b90d237843b601b05d2cb9acaf532c4f7315bf5a6",
+  "task_id": "RTLLMv2-LIFObuffer",
+  "top_module": "LIFObuffer",
+  "validation_mode": "iverilog_compatibility_compile"
+}

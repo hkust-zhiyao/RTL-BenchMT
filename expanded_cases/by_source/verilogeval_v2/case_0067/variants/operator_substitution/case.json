@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0067_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "wire [3:0] enable = { q[11:0]!=12'h999, q[7:0]==8'h99, q[3:0] == 4'h9, 1'b1};",
+  "old_fragment": "wire [3:0] enable = { q[11:0]==12'h999, q[7:0]==8'h99, q[3:0] == 4'h9, 1'b1};",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "4d0d57f3b6cdff0833c81ffb008201e306ac2811d9f2fa5c1ac0dbd3510cb625",
+  "source_case_id": "case_0067",
+  "source_rtl_sha256": "699702b0cbd8dead9301675e70fe23b847a58a81d5757e87af0abd26163f01ec",
+  "task_id": "VerilogEvalHumanV2-countbcd",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

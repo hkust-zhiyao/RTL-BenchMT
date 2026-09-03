@@ -1,0 +1,30 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "a7eea663bbfb91998dffefae2fbffb20f9840cb1ce361286c92c4569b6769674",
+  "original_rtl_sha256": "ea1e64be378b21e14efa99484ed4763237328cb5def9fd51fee8f93d4d959c2d",
+  "schema_version": "1.0",
+  "source_case_id": "case_0023",
+  "task_id": "RTLLMv2-fsm",
+  "top_module": "fsm",
+  "variant_count": 3,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0023_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0023/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0023_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0023/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "RTLLM2_case_0023_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0023/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_equality_with_inequality"
+    }
+  ]
+}

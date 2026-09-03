@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0131_branch_selection",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "!(cpu_overheated)",
+  "old_fragment": "cpu_overheated",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "branch_selection",
+  "shift_strategy": "invert_branch_condition",
+  "shifted_rtl_sha256": "5281a6082577fc26dba0918d3bf7d813d7c15389e5d852a4e76594d1eff78763",
+  "source_case_id": "case_0131",
+  "source_rtl_sha256": "5d7b5e97e5f038c0c13d3f06634095f23b50b946223ee7ec398483e0a74dc36e",
+  "task_id": "VerilogEvalHumanV2-always_if2",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

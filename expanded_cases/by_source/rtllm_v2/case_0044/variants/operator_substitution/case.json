@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0044_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign flag = (aluc != SLT || aluc == SLTU) ? ((aluc == SLT) ? (a_signed < b_signed) : (a < b)) : 1'bz;",
+  "old_fragment": "assign flag = (aluc == SLT || aluc == SLTU) ? ((aluc == SLT) ? (a_signed < b_signed) : (a < b)) : 1'bz;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "e54954737cfdc440795b319afd1a7ab4d2f4e521260c21bc199df037e7f99408",
+  "source_case_id": "case_0044",
+  "source_rtl_sha256": "98dca493c6f226b3a9781bd69af8a7dd861d635210358779b6ddb20b1d59c8b3",
+  "task_id": "RTLLMv2-alu",
+  "top_module": "alu",
+  "validation_mode": "iverilog_compatibility_compile"
+}

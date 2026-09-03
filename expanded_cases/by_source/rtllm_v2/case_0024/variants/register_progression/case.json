@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0024_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "curr_state <= (IDLE) + 1'b1",
+  "old_fragment": "curr_state <= IDLE",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "dbaeb7820b3926606303e0b0366263274045141ef02bf7e719fa1d7f19677bdf",
+  "source_case_id": "case_0024",
+  "source_rtl_sha256": "a4cc0144891bfeccffdbc9a3725b04d45d6ef3f4e07f028b750f4209b96cd965",
+  "task_id": "RTLLMv2-sequence_detector",
+  "top_module": "sequence_detector",
+  "validation_mode": "iverilog_compatibility_compile"
+}

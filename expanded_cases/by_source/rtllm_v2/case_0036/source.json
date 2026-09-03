@@ -1,0 +1,36 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "690e82a1f60b4a170a1d39f4277b66ec46ed9dddb5ee5f0ab980dd83301e9ee4",
+  "original_rtl_sha256": "730ebfdfce685f046173499418944f1d0cf07a8bc99f9f9f85abbbbaebeb1e1e",
+  "schema_version": "1.0",
+  "source_case_id": "case_0036",
+  "task_id": "RTLLMv2-parallel2serial",
+  "top_module": "parallel2serial",
+  "variant_count": 4,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0036_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0036/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0036_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0036/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "RTLLM2_case_0036_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0036/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_equality_with_inequality"
+    },
+    {
+      "case_id": "RTLLM2_case_0036_register_progression",
+      "relative_path": "by_source/rtllm_v2/case_0036/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

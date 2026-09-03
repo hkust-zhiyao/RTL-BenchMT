@@ -1,0 +1,11 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  clk
+ - input  reset
+ - output q (10 bits)
+
+Assume all sequential logic is triggered on the positive edge of the clock. When reset is low or q equals 999, set q to 0; otherwise increment q by one.
+

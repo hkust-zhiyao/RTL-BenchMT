@@ -1,0 +1,18 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "5530a2b20042d8534324f221eab85bde4eb19264cdafeb21b76afe8289b8ff81",
+  "original_rtl_sha256": "8bd1d42c007b2b463cf8888fd8109197ab8ce53059206ce6cf1589dfc4ad0cc5",
+  "schema_version": "1.0",
+  "source_case_id": "case_0035",
+  "task_id": "VerilogEvalHumanV2-ringer",
+  "top_module": "TopModule",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "VE2_case_0035_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0035/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    }
+  ]
+}

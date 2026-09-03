@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0042_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign out = ~{ {5{a}}, {5{b}}, {5{c}}, {5{d}}, {5{e}} } & {5{a,b,c,d,e}};",
+  "old_fragment": "assign out = ~{ {5{a}}, {5{b}}, {5{c}}, {5{d}}, {5{e}} } ^ {5{a,b,c,d,e}};",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise XOR_with_bitwise AND",
+  "shifted_rtl_sha256": "4d112e4c436589ce663862ed9ed80aedd3114dd75df56e5fa3cea0be96f5f9be",
+  "source_case_id": "case_0042",
+  "source_rtl_sha256": "fc887ea1b3d3b1a43c2ebbc6a6d321c12c4cdee70007bf9bb4690b29198f815e",
+  "task_id": "VerilogEvalHumanV2-vector5",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

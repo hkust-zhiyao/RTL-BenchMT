@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0033_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "else if(cnt1 > NUM_DIV - 1) cnt1 <= cnt1 + 1'b1;",
+  "old_fragment": "else if(cnt1 < NUM_DIV - 1) cnt1 <= cnt1 + 1'b1;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_less-than_with_greater-than",
+  "shifted_rtl_sha256": "86d7443a416e01e4afc38f136eb55177e82df9b55920d14b27b1d333687be0c1",
+  "source_case_id": "case_0033",
+  "source_rtl_sha256": "8b90949d26263926cce4f9298b7482594e502cf8b103a3028abf1327f8fadaea",
+  "task_id": "RTLLMv2-freq_divbyodd",
+  "top_module": "freq_divbyodd",
+  "validation_mode": "iverilog_compatibility_compile"
+}

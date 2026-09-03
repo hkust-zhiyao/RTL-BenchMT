@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0019_control_signal_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "posedge rst_n",
+  "old_fragment": "negedge rst_n",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "control_signal_behavior",
+  "shift_strategy": "change_control_edge",
+  "shifted_rtl_sha256": "b8e1b216fa30f3d995fde8b8a71055e4d36494ac5f8f256b615c082edd1b21fc",
+  "source_case_id": "case_0019",
+  "source_rtl_sha256": "063822c3c64f8e0e0cf66dc1e1e06edfd48571e01dc73b728ac2aed225c4b48b",
+  "task_id": "RTLLMv2-JC_counter",
+  "top_module": "JC_counter",
+  "validation_mode": "iverilog_compatibility_compile"
+}

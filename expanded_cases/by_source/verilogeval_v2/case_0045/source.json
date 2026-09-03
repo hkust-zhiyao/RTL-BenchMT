@@ -1,0 +1,24 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "9811f11e20c7952afb66fb74c415f59bd762031f13340ec5002ac24082cc77e8",
+  "original_rtl_sha256": "24e7078cf9aeaf5730228768d2d5131e5ff8095fdcf41e2f819cc6712cb28a72",
+  "schema_version": "1.0",
+  "source_case_id": "case_0045",
+  "task_id": "VerilogEvalHumanV2-dff8p",
+  "top_module": "TopModule",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "VE2_case_0045_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0045/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "VE2_case_0045_control_signal_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0045/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    }
+  ]
+}

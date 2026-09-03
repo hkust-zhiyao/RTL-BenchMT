@@ -1,0 +1,18 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "db35b613e2e9800fd53faf14c717fc053fa723f4a97a7eecfbc459f18fa54f9d",
+  "original_rtl_sha256": "fd05947bb790cc30fbc348bd272053377e718611affdd86892a1922edec454f2",
+  "schema_version": "1.0",
+  "source_case_id": "case_0086",
+  "task_id": "VerilogEvalHumanV2-gates",
+  "top_module": "TopModule",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "VE2_case_0086_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0086/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    }
+  ]
+}

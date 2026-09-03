@@ -1,0 +1,24 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "7af1e9009de3c8b5433bf3dcfa3dca917f3a0dbc710d4b9d2a17840e8fc2896c",
+  "original_rtl_sha256": "7c9a025f6e11670872f06fed927fb111485bc71f8c52d7fe579508db230460a1",
+  "schema_version": "1.0",
+  "source_case_id": "case_0077",
+  "task_id": "VerilogEvalHumanV2-dualedge",
+  "top_module": "TopModule",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "VE2_case_0077_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0077/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_ternary_condition"
+    },
+    {
+      "case_id": "VE2_case_0077_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0077/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "change_ternary_selector_polarity"
+    }
+  ]
+}

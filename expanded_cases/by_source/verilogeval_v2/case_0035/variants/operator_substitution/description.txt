@@ -1,0 +1,15 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  ring
+ - input  vibrate_mode
+ - output ringer
+ - output motor
+
+The module should implement a circuit to control a cellphone's ringer and
+vibration motor. ringer is high when ring is high or vibrate_mode is low. If the phone is in
+vibrate mode (input vibrate_mode = 1), turn on the motor. Otherwise, turn
+on the ringer.
+

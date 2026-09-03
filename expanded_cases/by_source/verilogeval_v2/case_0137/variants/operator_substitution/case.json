@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0137_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign z = (state != E) || (state == F);",
+  "old_fragment": "assign z = (state == E) || (state == F);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "f6054c14ba59765356d728680b2be06a0647cccae25bb8ae843fe3f011d423a1",
+  "source_case_id": "case_0137",
+  "source_rtl_sha256": "d4fc98953061961badc2b9fae62831f301f986b6ba1a963ece1c183ad4cd7808",
+  "task_id": "VerilogEvalHumanV2-2012_q2fsm",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

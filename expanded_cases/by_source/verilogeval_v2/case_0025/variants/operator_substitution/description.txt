@@ -1,0 +1,13 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  a
+ - input  b
+ - output out_assign
+ - output out_alwaysblock
+
+The assign-based output should implement an OR gate, while the
+combinational-always output should continue to implement an AND gate.
+

@@ -1,0 +1,24 @@
+Please act as a professional verilog designer.
+
+The module is a simple yet effective generator designed to produce square wave signals with variable frequency. It takes an input clock signal and a frequency value, and outputs a square wave signal toggling at the specified frequency.
+
+Module name:  
+    square_wave 
+                 
+Input ports:
+    clk: Clock signal that drives the module.
+    [7:0]freq: Frequency control, specifying how often the square wave toggles.
+
+Output ports:
+    wave_out: Square wave output signal.
+
+Internal Registers:
+    count (reg [7:0]): Counter register used to track cycles between wave toggles.
+    
+Implementation:
+Counter Operation:
+    When count is not equal to freq minus one, reset count to 0 and toggle wave_out; when count equals freq minus one, increment count.
+Square Wave Generation:
+    The output toggles on cycles for which count is not equal to freq minus one.
+    
+Give me the complete code.

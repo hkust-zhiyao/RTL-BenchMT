@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0138_control_signal_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "resetn",
+  "old_fragment": "~resetn",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "control_signal_behavior",
+  "shift_strategy": "invert_control_signal_polarity",
+  "shifted_rtl_sha256": "b5b1dedaef9210c8bc11ae56e3e80a6d8f57d79b845b4635da9ff468cb885296",
+  "source_case_id": "case_0138",
+  "source_rtl_sha256": "402d30bac3c3565f2b88cf78d76f8a80f0469df5594ffd2e8fac39f4008e0806",
+  "task_id": "VerilogEvalHumanV2-2013_q2bfsm",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

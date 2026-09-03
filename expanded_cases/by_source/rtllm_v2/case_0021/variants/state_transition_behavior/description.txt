@@ -1,0 +1,24 @@
+Please act as a professional Verilog designer.
+
+Implement a module of an 8-bit ring counter for cyclic state sequences.
+
+Module name:
+ring_counter
+
+Input ports:
+        clk: Clock signal that drives the state transitions of the ring counter.
+        reset: Reset signal to initialize the counter to its starting state.
+
+Output ports:
+        out [7:0]: 8-bit output representing the stored ring value. If the stored value is one-hot, its set bit cycles through the output; reset itself does not establish a one-hot value.
+
+Internal logic:
+1. State Transition: The stored value rotates left by one bit with each clock pulse. A one-hot value therefore produces the usual cyclic ring pattern.
+   
+2. Reset behavior: While reset is high, the stored ring value is rotated left by one position on each rising clock edge; reset does not force a fixed starting value.
+
+3. Cycling Behavior: On each rising edge of the clock signal, the 1 shifts to the next bit in the sequence, and after reaching the most significant bit (MSB), it wraps around to the LSB, creating a cyclic sequence.
+
+
+
+Give me the complete code.

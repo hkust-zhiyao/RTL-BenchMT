@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0025_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "RAM_MEM[waddr] <= (wdata) + 1'b1",
+  "old_fragment": "RAM_MEM[waddr] <= wdata",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "c33e2217a6bc7a4428ea4982b5b97e45871ced59b6a1ca8e34159da97c9e0aab",
+  "source_case_id": "case_0025",
+  "source_rtl_sha256": "a209fc65f57bcda0fa930944653f047a8cd530f3bde5f015e4bebb10c58b1a49",
+  "task_id": "RTLLMv2-asyn_fifo",
+  "top_module": "asyn_fifo",
+  "validation_mode": "iverilog_compatibility_compile"
+}

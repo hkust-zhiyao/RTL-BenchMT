@@ -1,0 +1,24 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "2e035845450923f438b7bbd450cef9d4eef8f1e30dba713bb985a04e504f7b68",
+  "original_rtl_sha256": "f7f37c20ccf3786d6a9629d5546b7dda16e9daf4f7ebf01e79f90cc51b4f00ee",
+  "schema_version": "1.0",
+  "source_case_id": "case_0015",
+  "task_id": "RTLLMv2-fixed_point_adder",
+  "top_module": "fixed_point_adder",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0015_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0015/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0015_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0015/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_equality_with_inequality"
+    }
+  ]
+}

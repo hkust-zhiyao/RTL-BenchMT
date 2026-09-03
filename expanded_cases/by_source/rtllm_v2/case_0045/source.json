@@ -1,0 +1,24 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "bfc7800fd9ba18c8047b9e1ad864d547c484bbb1110fab518111aae6359b3ec7",
+  "original_rtl_sha256": "62129a458c3648cde000e1eb0ac149d3970b4160664012afbf6f662811e89a92",
+  "schema_version": "1.0",
+  "source_case_id": "case_0045",
+  "task_id": "RTLLMv2-clkgenerator",
+  "top_module": "clkgenerator",
+  "variant_count": 2,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0045_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0045/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_division_with_multiplication"
+    },
+    {
+      "case_id": "RTLLM2_case_0045_state_transition_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0045/variants/state_transition_behavior",
+      "shift_category": "state_transition_behavior",
+      "shift_strategy": "change_stored_state_value"
+    }
+  ]
+}

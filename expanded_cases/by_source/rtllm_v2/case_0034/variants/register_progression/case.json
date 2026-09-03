@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0034_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "Secs <= (0) + 1'b1",
+  "old_fragment": "Secs <= 0",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "0491f31e2e1e5e428045ec7d593d85a49df9bbc9fba4aa686008ee16f90072e2",
+  "source_case_id": "case_0034",
+  "source_rtl_sha256": "aa9a3069521b019f973c9c8fdc8fe166ef2e1cbc5d03b29f253e88cb6fe3e7a9",
+  "task_id": "RTLLMv2-calendar",
+  "top_module": "calendar",
+  "validation_mode": "iverilog_compatibility_compile"
+}

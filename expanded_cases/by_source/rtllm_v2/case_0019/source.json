@@ -1,0 +1,36 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "562151aa7c605e33648ccfdd2c1f768950e6fbe16ad52ddc35e33b896bc57b5b",
+  "original_rtl_sha256": "063822c3c64f8e0e0cf66dc1e1e06edfd48571e01dc73b728ac2aed225c4b48b",
+  "schema_version": "1.0",
+  "source_case_id": "case_0019",
+  "task_id": "RTLLMv2-JC_counter",
+  "top_module": "JC_counter",
+  "variant_count": 4,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0019_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0019/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0019_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0019/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "change_control_edge"
+    },
+    {
+      "case_id": "RTLLM2_case_0019_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0019/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_negated_predicate_with_positive_predicate"
+    },
+    {
+      "case_id": "RTLLM2_case_0019_register_progression",
+      "relative_path": "by_source/rtllm_v2/case_0019/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

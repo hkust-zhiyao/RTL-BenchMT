@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0021_control_signal_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "~(reset)",
+  "old_fragment": "reset",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "control_signal_behavior",
+  "shift_strategy": "invert_control_signal_polarity",
+  "shifted_rtl_sha256": "77bcc50287b6c11ffe3905733d75eb753c2b77c22e8cb9521aa99d669bd12b84",
+  "source_case_id": "case_0021",
+  "source_rtl_sha256": "7697be7e93b8d745acfb86073a28a495b9876b6fb25c673fae427238fb5de62a",
+  "task_id": "RTLLMv2-ring_counter",
+  "top_module": "ring_counter",
+  "validation_mode": "iverilog_compatibility_compile"
+}

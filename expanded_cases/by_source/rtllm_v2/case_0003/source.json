@@ -1,0 +1,18 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "56031f3ec5fae6d1d41154a71bf238410847de0e5e28e23f111af171f9fc75b4",
+  "original_rtl_sha256": "ec6f653763cb7ccd07afa7223f4b66d5f9c37f307eb4cb1606fdfa556a7f444f",
+  "schema_version": "1.0",
+  "source_case_id": "case_0003",
+  "task_id": "RTLLMv2-adder_8bit",
+  "top_module": "adder_8bit",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0003_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0003/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_addition_with_subtraction"
+    }
+  ]
+}

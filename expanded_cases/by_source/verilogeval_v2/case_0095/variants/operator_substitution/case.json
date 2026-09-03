@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0095_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign start_shifting = state != Done;",
+  "old_fragment": "assign start_shifting = state == Done;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "bc38d0082bba0a44b0df4fbf5b953d1175720210a764ee34592ed3737e1379f7",
+  "source_case_id": "case_0095",
+  "source_rtl_sha256": "0fb569e05f0af10285612204baabc9997637a47106bee5de8c4afc7e4fb4bfbd",
+  "task_id": "VerilogEvalHumanV2-review2015_fsmseq",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

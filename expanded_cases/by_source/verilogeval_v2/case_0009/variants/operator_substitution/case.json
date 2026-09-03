@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0009_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign z = (x^y) | x;",
+  "old_fragment": "assign z = (x^y) & x;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "1fe1b5929b88d13144bc8505b90278991349fba84358f9f93ee142ead051c64f",
+  "source_case_id": "case_0009",
+  "source_rtl_sha256": "f9d234ca574a9b0df09f733c0fc9d08b3ff52fe3dd019ec5ae66d2a7c10c00a6",
+  "task_id": "VerilogEvalHumanV2-mt2015_q4a",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

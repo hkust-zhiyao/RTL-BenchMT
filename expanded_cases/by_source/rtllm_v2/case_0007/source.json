@@ -1,0 +1,18 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "e96f4efb0fb1bc3b4ff5dc54c6d2d61f83420e761f883dfd208286c3b92a1fce",
+  "original_rtl_sha256": "abb2225be214b06f6c295b7ca88eb7893d468f0581cda978422792f5780dcefe",
+  "schema_version": "1.0",
+  "source_case_id": "case_0007",
+  "task_id": "RTLLMv2-comparator_4bit",
+  "top_module": "comparator_4bit",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0007_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0007/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_equality_with_inequality"
+    }
+  ]
+}

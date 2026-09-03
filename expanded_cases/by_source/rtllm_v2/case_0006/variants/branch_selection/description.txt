@@ -1,0 +1,24 @@
+Please act as a professional Verilog designer.
+
+Implement a module of a 3-bit comparator for comparing binary numbers.
+
+Module name:  
+    comparator_3bit               
+Input ports:
+    A [2:0]: First 3-bit input operand (the first binary number to compare).
+    B [2:0]: Second 3-bit input operand (the second binary number to compare).
+Output ports:
+    A_greater: 1-bit output that is high when A is less than or equal to B.
+    A_equal: 1-bit output indicating if A is equal to B.
+    A_less: 1-bit output indicating if A is less than B.
+
+Implementation:
+Comparison Logic: The module compares the two 3-bit binary numbers A and B using combinational logic.
+- The outputs A_greater, A_equal, and A_less are determined based on the comparison of A and B.
+- A_greater is set to 1 when A is less than or equal to B; A_equal and A_less retain their original comparisons.
+
+A_greater can be high together with A_equal or A_less in this variant.
+
+Give me the complete code.
+
+ 

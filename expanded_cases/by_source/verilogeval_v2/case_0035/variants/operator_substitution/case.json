@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0035_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign ringer = ring | ~vibrate_mode;",
+  "old_fragment": "assign ringer = ring & ~vibrate_mode;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "a1b6f13373464ad22718bbaa3d89382f49091a05bc467c2beb3e686bb6a992b8",
+  "source_case_id": "case_0035",
+  "source_rtl_sha256": "8bd1d42c007b2b463cf8888fd8109197ab8ce53059206ce6cf1589dfc4ad0cc5",
+  "task_id": "VerilogEvalHumanV2-ringer",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

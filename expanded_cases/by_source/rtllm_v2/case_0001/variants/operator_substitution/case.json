@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0001_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign y = ((~a) | (~b) & Cin | (~a) & b & (~Cin) | a & (~b) & (~Cin) | (a & b & Cin));",
+  "old_fragment": "assign y = ((~a) & (~b) & Cin | (~a) & b & (~Cin) | a & (~b) & (~Cin) | (a & b & Cin));",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise AND_with_bitwise OR",
+  "shifted_rtl_sha256": "0ed75cae880a1b8c32e9345a34bc64ce51ce6a3d7465052591ba1783b2de1955",
+  "source_case_id": "case_0001",
+  "source_rtl_sha256": "3ee85639497d6a85eeec48faea60a5aa47fc6bdeaa48066fb135602f11d92275",
+  "task_id": "RTLLMv2-adder_16bit",
+  "top_module": "adder_16bit",
+  "validation_mode": "iverilog_compatibility_compile"
+}

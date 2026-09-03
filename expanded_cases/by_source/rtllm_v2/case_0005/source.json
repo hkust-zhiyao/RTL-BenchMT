@@ -1,0 +1,30 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "f5f1f2f71dcc559f37b2b0f41ccf286110e3afeb147f894cb94ded1ad90547bc",
+  "original_rtl_sha256": "78ddd3f77dac5c273a906698773f19087d4a915c0a003857137188da4c26b8cb",
+  "schema_version": "1.0",
+  "source_case_id": "case_0005",
+  "task_id": "RTLLMv2-adder_pipe_64bit",
+  "top_module": "adder_pipe_64bit",
+  "variant_count": 3,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0005_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0005/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "RTLLM2_case_0005_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0005/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_addition_with_subtraction"
+    },
+    {
+      "case_id": "RTLLM2_case_0005_register_progression",
+      "relative_path": "by_source/rtllm_v2/case_0005/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

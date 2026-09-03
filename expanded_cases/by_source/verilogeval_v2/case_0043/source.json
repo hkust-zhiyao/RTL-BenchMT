@@ -1,0 +1,18 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "ca7e990ab01903f606c956d8af8fb9faf01adf063847560d23e3d99fc10968a7",
+  "original_rtl_sha256": "c985c4e754baf171526e86dd8f130549132e148da7db7e3348c079162d8f8353",
+  "schema_version": "1.0",
+  "source_case_id": "case_0043",
+  "task_id": "VerilogEvalHumanV2-vectorgates",
+  "top_module": "TopModule",
+  "variant_count": 1,
+  "variants": [
+    {
+      "case_id": "VE2_case_0043_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0043/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise OR_with_bitwise XOR"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0126_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign walk_left = (state!=WL);",
+  "old_fragment": "assign walk_left = (state==WL);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "8c6c96260c9bf237e2124ee76d65f43ac82ccd8e4b3cc50a02aa6dbd22c6cab8",
+  "source_case_id": "case_0126",
+  "source_rtl_sha256": "92c8b0e80f637209925cea25d328f114857342e50f04494e2b01177cfb91181d",
+  "task_id": "VerilogEvalHumanV2-lemmings1",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

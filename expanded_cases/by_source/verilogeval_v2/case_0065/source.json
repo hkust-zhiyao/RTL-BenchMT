@@ -1,0 +1,36 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "b1898b09d8af0c9d7c2340e756eb24cfd24ff4d2987e69ed7d8843943d966464",
+  "original_rtl_sha256": "e36bcc084d7672e3f76f3c485f386b9ae02341252cb27e3c4605d54a227af1fe",
+  "schema_version": "1.0",
+  "source_case_id": "case_0065",
+  "task_id": "VerilogEvalHumanV2-edgecapture",
+  "top_module": "TopModule",
+  "variant_count": 4,
+  "variants": [
+    {
+      "case_id": "VE2_case_0065_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0065/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "VE2_case_0065_control_signal_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0065/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "VE2_case_0065_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0065/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    },
+    {
+      "case_id": "VE2_case_0065_register_progression",
+      "relative_path": "by_source/verilogeval_v2/case_0065/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

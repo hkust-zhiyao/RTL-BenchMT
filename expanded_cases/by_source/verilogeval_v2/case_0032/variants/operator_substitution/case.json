@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0032_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign overflow = !(a[7]^b[7]) && (a[7] == s[7]);",
+  "old_fragment": "assign overflow = !(a[7]^b[7]) && (a[7] != s[7]);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_inequality_with_equality",
+  "shifted_rtl_sha256": "ace1738a4ea1cc1a7de5c4fae5b9fb2d4efe086193f4e62fa6033f9cf62222fd",
+  "source_case_id": "case_0032",
+  "source_rtl_sha256": "70556fcdfe57e54f5a7fe358919e697074cbf7b5f06c305b94e5b4ca8bab61ce",
+  "task_id": "VerilogEvalHumanV2-ece241_2014_q1c",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

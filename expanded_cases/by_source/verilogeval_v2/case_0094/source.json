@@ -1,0 +1,42 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "31a48288034070f7ab847da07c03fcbfcd2cc973fed3b0f2da5c68d1fed349b0",
+  "original_rtl_sha256": "a0926e66cc422a056dcaa0e090a7d43be84aaed96e119e4ba762a78a0c87f84a",
+  "schema_version": "1.0",
+  "source_case_id": "case_0094",
+  "task_id": "VerilogEvalHumanV2-review2015_fsmshift",
+  "top_module": "TopModule",
+  "variant_count": 5,
+  "variants": [
+    {
+      "case_id": "VE2_case_0094_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0094/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "VE2_case_0094_control_signal_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0094/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "VE2_case_0094_operator_substitution",
+      "relative_path": "by_source/verilogeval_v2/case_0094/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_equality_with_inequality"
+    },
+    {
+      "case_id": "VE2_case_0094_register_progression",
+      "relative_path": "by_source/verilogeval_v2/case_0094/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    },
+    {
+      "case_id": "VE2_case_0094_state_transition_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0094/variants/state_transition_behavior",
+      "shift_category": "state_transition_behavior",
+      "shift_strategy": "redirect_state_transition"
+    }
+  ]
+}

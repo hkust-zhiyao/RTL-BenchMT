@@ -1,0 +1,12 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input clk
+ - input in       (8 bits)
+ - output anyedge (8 bits)
+
+For each bit, anyedge compares the current input with the corresponding bit of the previous input vector incremented by one. The output bit is set in the cycle after those two bits differ. Assume all 
+sequential logic is triggered on the positive edge of the clock.
+

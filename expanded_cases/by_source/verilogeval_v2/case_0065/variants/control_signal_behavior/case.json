@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0065_control_signal_behavior",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "~(reset)",
+  "old_fragment": "reset",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "control_signal_behavior",
+  "shift_strategy": "invert_control_signal_polarity",
+  "shifted_rtl_sha256": "9d4c765df923bde6040f0562302bf0b8000d8e642517066a44881bbb6ac92f8a",
+  "source_case_id": "case_0065",
+  "source_rtl_sha256": "e36bcc084d7672e3f76f3c485f386b9ae02341252cb27e3c4605d54a227af1fe",
+  "task_id": "VerilogEvalHumanV2-edgecapture",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

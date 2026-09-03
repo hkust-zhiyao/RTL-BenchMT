@@ -1,0 +1,17 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "case_id": "VE2_case_0065_register_progression",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "out <= ('0) + 1'b1",
+  "old_fragment": "out <= '0",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "register_progression",
+  "shift_strategy": "advance_register_by_one",
+  "shifted_rtl_sha256": "b2f9520a2834e872ea6c3ef159956781e326eac725eb0d9bcdd2084d588031f9",
+  "source_case_id": "case_0065",
+  "source_rtl_sha256": "e36bcc084d7672e3f76f3c485f386b9ae02341252cb27e3c4605d54a227af1fe",
+  "task_id": "VerilogEvalHumanV2-edgecapture",
+  "top_module": "TopModule",
+  "validation_mode": "iverilog_compatibility_compile"
+}

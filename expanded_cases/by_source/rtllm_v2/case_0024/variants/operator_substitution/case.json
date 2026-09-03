@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0024_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign sequence_detected = (curr_state !=S4) ? 1'b1 : 1'b0;",
+  "old_fragment": "assign sequence_detected = (curr_state ==S4) ? 1'b1 : 1'b0;",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_equality_with_inequality",
+  "shifted_rtl_sha256": "e2adc5e524efd8f36d213ad6b48ceb768f536c90b9c8df73f884027d8191336a",
+  "source_case_id": "case_0024",
+  "source_rtl_sha256": "a4cc0144891bfeccffdbc9a3725b04d45d6ef3f4e07f028b750f4209b96cd965",
+  "task_id": "RTLLMv2-sequence_detector",
+  "top_module": "sequence_detector",
+  "validation_mode": "iverilog_compatibility_compile"
+}

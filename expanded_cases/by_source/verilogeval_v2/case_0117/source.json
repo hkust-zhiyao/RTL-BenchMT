@@ -1,0 +1,30 @@
+{
+  "benchmark": "VerilogEval v2.0",
+  "original_description_sha256": "044c38a84eba60a9651d589839f512fa7a7eae9a93794c14b125648f5f2a8c92",
+  "original_rtl_sha256": "d12c500ae7ce613237d33f611f5339c9673c2f4ad0b61b3de4d2677efec05c00",
+  "schema_version": "1.0",
+  "source_case_id": "case_0117",
+  "task_id": "VerilogEvalHumanV2-history_shift",
+  "top_module": "TopModule",
+  "variant_count": 3,
+  "variants": [
+    {
+      "case_id": "VE2_case_0117_branch_selection",
+      "relative_path": "by_source/verilogeval_v2/case_0117/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "VE2_case_0117_control_signal_behavior",
+      "relative_path": "by_source/verilogeval_v2/case_0117/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "VE2_case_0117_register_progression",
+      "relative_path": "by_source/verilogeval_v2/case_0117/variants/register_progression",
+      "shift_category": "register_progression",
+      "shift_strategy": "advance_register_by_one"
+    }
+  ]
+}

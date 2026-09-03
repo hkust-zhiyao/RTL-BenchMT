@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0044_branch_selection",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "!((aluc == SLT || aluc == SLTU))",
+  "old_fragment": "(aluc == SLT || aluc == SLTU)",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "branch_selection",
+  "shift_strategy": "invert_ternary_condition",
+  "shifted_rtl_sha256": "a3e4d50d70fb622eec57b32dcf5293f3480647f3125fa8807602db233b33029c",
+  "source_case_id": "case_0044",
+  "source_rtl_sha256": "98dca493c6f226b3a9781bd69af8a7dd861d635210358779b6ddb20b1d59c8b3",
+  "task_id": "RTLLMv2-alu",
+  "top_module": "alu",
+  "validation_mode": "iverilog_compatibility_compile"
+}

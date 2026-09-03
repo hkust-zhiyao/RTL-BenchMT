@@ -1,0 +1,17 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "case_id": "RTLLM2_case_0027_operator_substitution",
+  "description_status": "agent_refined_small_diff",
+  "new_fragment": "assign feedback = ~(out[3] & out[2]);",
+  "old_fragment": "assign feedback = ~(out[3] ^ out[2]);",
+  "rtl_status": "materialized_validation_pass",
+  "schema_version": "1.0",
+  "shift_category": "operator_substitution",
+  "shift_strategy": "replace_bitwise XOR_with_bitwise AND",
+  "shifted_rtl_sha256": "107699a95739049856365ea695244eb5d7517d5ec0b37b2ac6beb0fa5a6a5f71",
+  "source_case_id": "case_0027",
+  "source_rtl_sha256": "445e1e00eb81aee75b6d7fdd76695c9b2ae73ac9c5105615f75d4b9f2c57af77",
+  "task_id": "RTLLMv2-LFSR",
+  "top_module": "LFSR",
+  "validation_mode": "iverilog_compatibility_compile"
+}

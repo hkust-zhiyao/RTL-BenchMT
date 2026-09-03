@@ -1,0 +1,30 @@
+{
+  "benchmark": "RTLLM v2.0",
+  "original_description_sha256": "b43f7c9c42905a08212e5662720e1866689b2c8125efbb7994500d511d6690bc",
+  "original_rtl_sha256": "6b1596f9961cad0c28efb27c21a7ef527d2afbdf4ff00b263ed2e8082a8fbce6",
+  "schema_version": "1.0",
+  "source_case_id": "case_0035",
+  "task_id": "RTLLMv2-edge_detect",
+  "top_module": "edge_detect",
+  "variant_count": 3,
+  "variants": [
+    {
+      "case_id": "RTLLM2_case_0035_branch_selection",
+      "relative_path": "by_source/rtllm_v2/case_0035/variants/branch_selection",
+      "shift_category": "branch_selection",
+      "shift_strategy": "invert_branch_condition"
+    },
+    {
+      "case_id": "RTLLM2_case_0035_control_signal_behavior",
+      "relative_path": "by_source/rtllm_v2/case_0035/variants/control_signal_behavior",
+      "shift_category": "control_signal_behavior",
+      "shift_strategy": "invert_control_signal_polarity"
+    },
+    {
+      "case_id": "RTLLM2_case_0035_operator_substitution",
+      "relative_path": "by_source/rtllm_v2/case_0035/variants/operator_substitution",
+      "shift_category": "operator_substitution",
+      "shift_strategy": "replace_bitwise AND_with_bitwise OR"
+    }
+  ]
+}

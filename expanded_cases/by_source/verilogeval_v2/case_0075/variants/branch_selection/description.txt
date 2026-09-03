@@ -1,0 +1,18 @@
+
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise
+specified.
+
+ - input  sel   (3 bits)
+ - input  data0 (4 bits)
+ - input  data1 (4 bits)
+ - input  data2 (4 bits)
+ - input  data3 (4 bits)
+ - input  data4 (4 bits)
+ - input  data5 (4 bits)
+ - output out   (4 bits)
+);
+
+The module should implement a 6-to-1 multiplexer. Choose data0, data1, data2, data3, data4, or data5 when sel is 7, 6, 5, 4, 3, or 2, respectively; otherwise output 0. The data
+inputs and outputs are all 4 bits wide.
+
